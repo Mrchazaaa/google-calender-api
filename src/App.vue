@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <form>
+      <fieldset>
+        <h3>Yo checkout my form</h3>
+        <div class="form-group">
+          <label for="exampleSelect1">Example select</label>
+          <select class="form-control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleTextarea">Example textarea</label>
+          <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+
+    <!-- <ResultsTable/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ResultsTable from './components/ResultsTable.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ResultsTable
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 55px;
 }
 </style>

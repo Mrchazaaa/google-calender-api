@@ -1,6 +1,6 @@
 <template>
   <div>
-    <table class="table table-hover">
+    <table class="table table-striped table-dark table-hover">
       <thead>
         <tr>
           <th scope="col">Type</th>
@@ -10,8 +10,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-active">
-          <th scope="row">Active</th>
+        <tr>
+          <th scope="row">Default</th>
           <td>Column content</td>
           <td>Column content</td>
           <td>Column content</td>
@@ -22,50 +22,8 @@
           <td>Column content</td>
           <td>Column content</td>
         </tr>
-        <tr class="table-primary">
-          <th scope="row">Primary</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-secondary">
-          <th scope="row">Secondary</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-success">
-          <th scope="row">Success</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-danger">
-          <th scope="row">Danger</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-warning">
-          <th scope="row">Warning</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-info">
-          <th scope="row">Info</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-light">
-          <th scope="row">Light</th>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-dark">
-          <th scope="row">Dark</th>
+        <tr>
+          <th scope="row">Default</th>
           <td>Column content</td>
           <td>Column content</td>
           <td>Column content</td>
@@ -83,4 +41,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.table {
+  margin-top: 30px;
+}
 </style>

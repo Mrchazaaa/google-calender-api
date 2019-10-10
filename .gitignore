@@ -28,3 +28,7 @@ public/
 .deploy*/
 src/_drafts
 package-lock.json
+
+#temporary for security :)
+credentials.json
+google-api.js

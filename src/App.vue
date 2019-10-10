@@ -19,7 +19,8 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <ResultsTable/>
+    <!-- <ResultsTable :numOfRows="6"/> -->
+    <ResultsTable v-bind:numOfRows="this.selection"/>
   </div>
 </template>
 
@@ -41,7 +42,9 @@ export default {
   },
   methods: {
     submitted() {
-
+      
+      console.log(this.selection);
+      console.log(typeof(this.selection));
       console.log(CLIENT_ID);
       console.log(API_KEY);
 

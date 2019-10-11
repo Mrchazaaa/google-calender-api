@@ -19,6 +19,8 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=Y2hhcmxpZS5ob3dsZXR0QGxpdmUuY28udWs&amp;color=%23039BE5&amp;mode=WEEK" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
     <ResultsTable v-bind:calendarResults="this.calendarResults" />
   </div>
 </template>

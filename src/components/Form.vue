@@ -53,6 +53,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+form {
+    margin-top: 20px;
+}
 .table {
   margin-top: 30px;
   border: solid black 2px;

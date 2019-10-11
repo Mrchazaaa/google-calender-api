@@ -10,9 +10,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="entries in numOfRows" :key="entries.text">
+        <tr v-for="entries in calendarResults" :key="entries.id">
           <th scope="row">Default</th>
-          <td>Column content</td>
+          <td>{{entries.summary}}</td>
           <td>Column content</td>
           <td>Column content</td>
         </tr>
@@ -26,7 +26,7 @@ export default {
   name: "ResultsTable",
   props: {
     calendarResults: {
-      type: Object
+      type: Array
     }
   }
 };

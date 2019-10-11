@@ -37,15 +37,17 @@ export default {
     return {
       selection: "3",
       name: "mr jenkins",
-      calendarResults: {1: "one", 2: "two"}
+      calendarResults: []
     };
   },
   methods: {
     submitted() {
+
+      var componentScope = this;
       
       listUpcomingEvents().then(function (response) {
         var events = response.result.items;
-        this.calendarResults = events;
+        componentScope.calendarResults = events;
       });
     }
   }

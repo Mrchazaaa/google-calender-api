@@ -2,7 +2,7 @@
   <div id="app">
     <div class="text-center">
       <button id="authorize_button" class="btn btn-primary" @click="onAuthClick">Signin with Google</button>
-      <button id="signout_button" class="btn btn-secondary" @click="onSignOutClick">Signout of Google</button>
+      <button id="signout_button" class="btn btn-primary disabled" @click="onSignOutClick">Signout of Google</button>
     </div>
     <Form id="form" class="d-none charliesclass" />
   </div>
@@ -22,18 +22,13 @@ export default {
   mounted: function() {
     var authorizeButton = document.getElementById('authorize_button');
     var signoutButton = document.getElementById('signout_button');
+    var formComponent = document.getElementById('form');
 
-    handleClientLoad(authorizeButton, signoutButton);
+    handleClientLoad(authorizeButton, signoutButton, formComponent);
   },
   methods: {
     onAuthClick: function(event) {
       var myForm = document.getElementById("form");
-
-      // if (myForm.classList.contains("d-none")) {
-      //   myForm.classList.remove("d-none");
-      // } else {
-      //   myForm.classList.add("d-none");
-      // }
 
       handleAuthClick(event);
     },

@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="entries in Number(numOfRows)" :key="entries.text">
+        <tr v-for="entries in numOfRows" :key="entries.text">
           <th scope="row">Default</th>
           <td>Column content</td>
           <td>Column content</td>
@@ -25,8 +25,8 @@
 export default {
   name: "ResultsTable",
   props: {
-    numOfRows: {
-      type: String
+    calendarResults: {
+      type: Object
     }
   }
 };

@@ -19,12 +19,13 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <ResultsTable v-bind:numOfRows="this.selection" />
+    <ResultsTable v-bind:calendarResults="this.calendarResults" />
   </div>
 </template>
 
 <script>
 import ResultsTable from "./ResultsTable.vue";
+import { listUpcomingEvents } from "../google-api.js";
 
 export default {
   name: "Form",
@@ -35,17 +36,17 @@ export default {
   data() {
     return {
       selection: "3",
-      name: "mr jenkins"
+      name: "mr jenkins",
+      calendarResults: {1: "one", 2: "two"}
     };
   },
   methods: {
     submitted() {
       
-      console.log(this.selection);
-      console.log(typeof(this.selection));
-      console.log(CLIENT_ID);
-      console.log(API_KEY);
-
+      listUpcomingEvents().then(function (response) {
+        var events = response.result.items;
+        this.calendarResults = events;
+      });
     }
   }
 };
